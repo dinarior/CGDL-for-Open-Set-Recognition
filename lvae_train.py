@@ -65,7 +65,7 @@ use_cuda = torch.cuda.is_available() and True
 device = torch.device("cuda" if use_cuda else "cpu")
 
 # data loader
-train_dataset = datasets.MNIST('data/mnist', download=False, train=True,
+train_dataset = datasets.MNIST('data/mnist', download=True, train=True,
                                transform=transforms.Compose([
 
                                    transforms.ToTensor(),
